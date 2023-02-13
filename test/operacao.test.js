@@ -4,9 +4,17 @@ const calculadora = require('../src/operacoes')
 describe('Teste da calculadora', () => {
 
     it('Operação de soma', () => {
-        const resultado = calculadora.sum(1, 2);
-
+        let resultado = calculadora.sum(1, 2);
         expect(resultado).toEqual(3)
+
+        resultado = calculadora.sum(-1, 2);
+        expect(resultado).toEqual(1)
+
+        resultado = () => calculadora.sum("a", 2);
+        expect(resultado).toThrow("Não é um número");
+
+        resultado = () => calculadora.sum(2, "a");
+        expect(resultado).toThrow("Não é um número");
     })
 
 })
