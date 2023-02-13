@@ -1,4 +1,4 @@
-const { describe, expect, it } = require('jest')
+const { describe, expect, it } = require('@jest/globals')
 const calculadora = require('../src/operacoes')
 
 describe('Teste da calculadora', () => {
