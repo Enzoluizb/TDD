@@ -30,6 +30,20 @@ describe('Teste da calculadora', () => {
         resultado = () => calculadora.sub(-2, "a");
         expect(resultado).toThrow("Não é um número");
     })
+
+    it('Operação de divisão', () => {
+        let resultado = calculadora.sub(4, 2);
+        expect(resultado).toEqual(2)
+
+        resultado = calculadora.sub(1, 2);
+        expect(resultado).toEqual(0.5)
+
+        resultado = () => calculadora.sub("a", -2);
+        expect(resultado).toThrow("Não é um número");
+
+        resultado = () => calculadora.sub(-2, "a");
+        expect(resultado).toThrow("Não é um número");
+    })
 // Math.sqrt raiz
 // Math.pow potencia
 })
